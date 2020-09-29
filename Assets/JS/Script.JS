@@ -1,6 +1,6 @@
 $("#getRecipes").on("click", function () {
-    var foodChoice = "Beef"//$(#"foodChoice");
-    var drinkChoice = "Cocktail"//$("#drinkChoice");
+    var foodChoice = $("#foodChoice").val();
+    var drinkChoice = $("#drinkChoice").val();
 
     var foodURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + foodChoice;
     var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=" + drinkChoice;
@@ -20,7 +20,7 @@ $("#getRecipes").on("click", function () {
             url: newFoodURL,
             method: "GET"
         }) .then(function (response) {
-            console.log(response);
+            dispFood(response);
         });
 
     });
@@ -29,7 +29,27 @@ $("#getRecipes").on("click", function () {
         url: drinkURL,
         method: "GET"
     }) .then(function (response) {
-        console.log(response);
+        var drinkCount = response.drinks.length;
+        var drinkPick = Math.floor(Math.random()*drinkCount);
+        var drinkRand = response.drinks[drinkPick].idDrink;
+
+        var newDrinkURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkRand;
+
+        $.ajax({
+            url: newDrinkURL,
+            method: "GET"
+        }) .then(function (response) {
+            dispDrink(response);
+        });
+
     });
 
 })
+
+function dispFood (res) {
+    console.log(res);
+}
+
+function dispDrink (res) {
+    console.log(res);
+}
