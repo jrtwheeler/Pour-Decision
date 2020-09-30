@@ -9,18 +9,27 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link rel="stylesheet" href="Assets/CSS/Style.CSS" />
     <title>Pour Decisions</title>
   </head>
   <body>
-    <header class="header">
-      <div>Pour Decsions</div>
+    <header class="header hero is-primary">
+      <div class="container hero-body has-text-centered">
+        <h1 class="title">Pour Decisions</h1>
+        <h2 class="subtitle">Pair a meal with a drink. Select categories below to get started.</h2>
+      </div>
+      <!-- <div>Pour Decsions</div> -->
     </header>
 
-    <section class = "content">
-        <article class="dropdown-food">
-                <label for="cars">Food:</label>
-                <select name="food" id="food">
+    <section class = "content mt-4">
+        <div class = "columns is-centered">
+          <div class ="column has-text-centered">
+            <article class="dropdown-food">
+                <label class="is-size-5" for="cars">Food:</label>
+                <div class = "select is-primary">
+                  <select name="food" id="food">
                   <option value="volvo">Beef</option>
                   <option value="saab">Chicken</option>
                   <option value="opel">Dessert</option>
@@ -34,13 +43,17 @@
                   <option value="opel">Vegetarian</option>
                   <option value="audi">Breakfast</option>
                   <option value="audi">Goat</option>
-                </select>
+                  </select>
+                </div>
                 <br><br>
-                <button id="getRecipes">Click here</button>
-        </article>
-        <article class="dropdown-beverage">
-                <label for="cars">Drink:</label>
-                <select name="drink" id="drink">
+                <button id="getRecipes" class="button is-primary">Click here</button>
+            </article>
+          </div>
+          <div class ="column has-text-centered">
+            <article class="dropdown-beverage">
+                <label class="is-size-5" for="cars">Drink:</label>
+                <div class = "select is-primary">
+                  <select name="drink" id="drink">
                     <option value="volvo">Ordinary Drink</option>
                     <option value="saab">Cocktail</option>
                     <option value="opel">Milk / Float / Shake</option>
@@ -52,11 +65,21 @@
                     <option value="volvo">Punch / Party Drink</option>
                     <option value="saab">Beer</option>
                     <option value="opel">Soft Drink / Soda</option>
-                </select>
+                  </select>
+                </div>
                 <br><br>
-                <button id="submit">
-        </article>
+                <button id="submit" class="button is-primary">Click here</button>
+            </article>
+          </div>
+        </div>
+        
     </section>
+
+    <!-- <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Created by Doug Jim & Candice</p>
+      </div>
+    </footer> -->
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
