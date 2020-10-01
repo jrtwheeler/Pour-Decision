@@ -59,27 +59,25 @@ function dispFood (res) {
     $("#foodImage").attr("src", meal.strMealThumb);
     $("#foodVideo").attr("src", meal.strYoutube);
     while (!stop) {
-        var ing = meal.strIngredient + i;
-        if (ing) {
+        if (meal['strIngredient' + i]) {
             var trDiv = $("<tr>");
             var tdDiv1 = $("<td>");
             var tdDiv2 = $("<td>");
-            tdDiv1.text(meal.strIngredient + i);
-            tdDiv2.text(meal.strMeasure + i);
-            trDiv.append(trDiv1, trDiv2);
+            tdDiv1.text(meal['strIngredient' + i]);
+            tdDiv2.text(meal['strMeasure' + i]);
+            trDiv.append(tdDiv1, tdDiv2);
             $("#foodIngredient").append(trDiv);
             i++;
         } else {
             stop = true;
         };
-    };
-    
+    };  
 
 }
 
 function dispDrink (res) {
     console.log(res);
-    var drink = "res.drinks"
+    var drink = res.drinks[0]
     var i = 1;
     var stop = false;
     $("#drinkName").text(drink.strDrink);
@@ -89,14 +87,13 @@ function dispDrink (res) {
     $("#drinkInstructions").text(drink.strInstructions);
     $("#drinkImage").attr("src", drink.strDrinkThumb);
     while (!stop) {
-        var ing = drink.strIngredient + i;
-        if (ing) {
+        if (drink['strIngredient' + i]) {
             var trDiv = $("<tr>");
             var tdDiv1 = $("<td>");
             var tdDiv2 = $("<td>");
-            tdDiv1.text(drink.strIngredient + i);
-            tdDiv2.text(drink.strMeasure + i);
-            trDiv.append(trDiv1, trDiv2);
+            tdDiv1.text(drink['strIngredient' + i]);
+            tdDiv2.text(drink['strMeasure' + i]);
+            trDiv.append(tdDiv1, tdDiv2);
             $("#drinkIngredient").append(trDiv);
             i++;
         } else {
