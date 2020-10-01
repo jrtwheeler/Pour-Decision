@@ -48,11 +48,12 @@ $("#getRecipes").on("click", function () {
 
 function dispFood (res) {
     console.log(res);
-    var meal = "res.meals"
+    var meal = res.meals[0];
     var i = 1;
     var stop = false;
+    console.log(meal.strMeal);
     $("#foodMeal").text(meal.strMeal);
-    $("#foodCategory").text(meal.Category);
+    $("#foodCategory").text(meal.strCategory);
     $("#foodOrigin").text(meal.strArea);
     $("#foodInstructions").text(meal.strInstructions);
     $("#foodImage").attr("src", meal.strMealThumb);
