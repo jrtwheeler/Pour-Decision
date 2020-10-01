@@ -48,8 +48,59 @@ $("#getRecipes").on("click", function () {
 
 function dispFood (res) {
     console.log(res);
+    var meal = "res.meals"
+    var i = 1;
+    var stop = false;
+    $("#foodMeal").text(meal.strMeal);
+    $("#foodCategory").text(meal.Category);
+    $("#foodOrigin").text(meal.strArea);
+    $("#foodInstructions").text(meal.strInstructions);
+    $("#foodImage").attr("src", meal.strMealThumb);
+    $("#foodVideo").attr("src", meal.strYoutube);
+    while (!stop) {
+        var ing = meal.strIngredient + i;
+        if (ing) {
+            var trDiv = $("<tr>");
+            var tdDiv1 = $("<td>");
+            var tdDiv2 = $("<td>");
+            tdDiv1.text(meal.strIngredient + i);
+            tdDiv2.text(meal.strMeasure + i);
+            trDiv.append(trDiv1, trDiv2);
+            $("#foodIngredient").append(trDiv);
+            i++;
+        } else {
+            stop = true;
+        };
+    };
+    
+
 }
 
 function dispDrink (res) {
     console.log(res);
+    var drink = "res.drinks"
+    var i = 1;
+    var stop = false;
+    $("#drinkName").text(drink.strDrink);
+    $("#drinkCategory").text(drink.strCategory);
+    $("#drinkAlcoholic").text(drink.strAlcoholic);
+    $("#drinkGlass").text(drink.strGlass);
+    $("#drinkInstructions").text(drink.strInstructions);
+    $("#drinkImage").attr("src", drink.strDrinkThumb);
+    while (!stop) {
+        var ing = drink.strIngredient + i;
+        if (ing) {
+            var trDiv = $("<tr>");
+            var tdDiv1 = $("<td>");
+            var tdDiv2 = $("<td>");
+            tdDiv1.text(drink.strIngredient + i);
+            tdDiv2.text(drink.strMeasure + i);
+            trDiv.append(trDiv1, trDiv2);
+            $("#drinkIngredient").append(trDiv);
+            i++;
+        } else {
+            stop = true;
+        };
+    };
+
 }
