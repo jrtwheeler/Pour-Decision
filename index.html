@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Pour Decisions</title>
-  </head>
 
-  <body>
-    <header class="header hero is-primary">
-      <div class="container hero-body has-text-centered">
-        <h1 class="title">Pour Decisions</h1>
-        <h2 class="subtitle">
-          Pair a meal with a drink. Select categories below to get started.
-        </h2>
-      </div>
-      <!-- <div>Pour Decsions</div> -->
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Pour Decisions</title>
+</head>
 
-    <section class="content mt-4">
+<body>
+  <header class="header hero is-primary">
+    <div class="container hero-body has-text-centered">
+      <h1 class="title"><img src="assets/images/PourDecisions-logo.png"></h1>
+      <h2 class="subtitle">
+        Pair a meal with a drink. Select categories below to get started.
+      </h2>
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <article class="dropdown-food">
@@ -54,108 +40,112 @@
                 <option value="Goat">Goat</option>
               </select>
             </div>
-            <br /><br />
-            <button id="getRecipes" class="button is-primary">
+          </article>
+        </div>
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <article class="dropdown-beverage">
+              <label class="is-size-5" for="cars">Drink:</label>
+              <div class="select is-primary">
+                <select name="drink" id="drinkChoice">
+                  <option value="Ordinary Drink">Ordinary Drink</option>
+                  <option value="Cocktail">Cocktail</option>
+                  <option value="Milk / Float / Shake">
+                    Milk / Float / Shake
+                  </option>
+                  <option value="Other/Unknown">Other/Unknown</option>
+                  <option value="Cocoa">Cocoa</option>
+                  <option value="Shot">Shot</option>
+                  <option value="Coffee / Tea">Coffee / Tea</option>
+                  <option value="Homemade Liquor">Homemade Liquor</option>
+                  <option value="Punch / Party Drink">Punch / Party Drink</option>
+                  <option value="Beer">Beer</option>
+                  <option value="Soft Drink / Soda">Soft Drink / Soda</option>
+                </select>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <button id="getRecipes" class="button">
               Click here
             </button>
-          </article>
-        </div>
-        <div class="column has-text-centered">
-          <article class="dropdown-beverage">
-            <label class="is-size-5" for="cars">Drink:</label>
-            <div class="select is-primary">
-              <select name="drink" id="drinkChoice">
-                <option value="Ordinary Drink">Ordinary Drink</option>
-                <option value="Cocktail">Cocktail</option>
-                <option value="Milk / Float / Shake">
-                  Milk / Float / Shake
-                </option>
-                <option value="Other/Unknown">Other/Unknown</option>
-                <option value="Cocoa">Cocoa</option>
-                <option value="Shot">Shot</option>
-                <option value="Coffee / Tea">Coffee / Tea</option>
-                <option value="Homemade Liquor">Homemade Liquor</option>
-                <option value="Punch / Party Drink">Punch / Party Drink</option>
-                <option value="Beer">Beer</option>
-                <option value="Soft Drink / Soda">Soft Drink / Soda</option>
-              </select>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="content mt-4">
-      <div class="columns">
-        <div class="column">
-          <div class="card is-size-5 object-food">
-            <div class="card-image">
-              <img id="foodImage" src="" alt="Delicious Food" />
-            </div>
-            <div class="media-content">
-              <p class="title is-3" id="foodMeal"></p>
-              <p class="subtitle is-4" id="foodCategory"></p>
-              <p class="subtitle is-6" id="foodOrigin"></p>
-            </div>
-            <table id="foodIngredient" class="table is-striped">
-              <tr>
-                <th>Ingredients</th>
-                <th>Amount</th>
-              </tr>
-            </table>
-            <div class="content" id="foodInstructions"></div>
-            <iframe width="420" height="315" id="foodVideo" src=""> </iframe>
           </div>
         </div>
 
-          <div class="column">
-            <div class="card is-size-5 object-drink">
-              <div class="card-image">
-                <img id="drinkImage" src="" alt="Delicious Drink" />
-              </div>
-              <div class="media-content">
-                <p class="title is-3" id="drinkName"></p>
-                <p class="subtitle is-4" id="drinkCategory"></p>
-                <p class="subtitle is-6" id="drinkAlcoholic"></p>
-                <p class="subtitle is-6" id="drinkGlass"></p>
-              </div>
-              <table id="drinkIngredient" class="table is-striped">
-                <tr>
-                  <th>Ingredients</th>
-                  <th>Amount</th>
-                </tr>
-              </table>
-              <div class="content" id="drinkInstructions"></div>
-              <iframe width="420" height="315" id="foodVideo" src=""> </iframe>
-            </div>
+
+        <!-- <div>Pour Decsions</div> -->
+  </header>
+
+
+
+  <section class="content mt-4">
+    <div class="columns">
+      <div class="column">
+        <div class="card is-size-5 object-food">
+          <div class="card-image">
+            <img id="foodImage" src="" alt="Delicious Food" />
           </div>
+          <div class="media-content">
+            <p class="title is-3" id="foodMeal"></p>
+            <p class="subtitle is-4" id="foodCategory"></p>
+            <p class="subtitle is-6" id="foodOrigin"></p>
+          </div>
+          <table id="foodIngredient" class="table is-striped">
+            <tr>
+              <th>Ingredients</th>
+              <th>Amount</th>
+            </tr>
+          </table>
+          <div class="content" id="foodInstructions"></div>
+          <iframe width="420" height="315" id="foodVideo" src=""> </iframe>
         </div>
       </div>
-    </section>
 
-    <!-- <footer class="footer">
+      <div class="column">
+        <div class="card is-size-5 object-drink">
+          <div class="card-image">
+            <img id="drinkImage" src="" alt="Delicious Drink" />
+          </div>
+          <div class="media-content">
+            <p class="title is-3" id="drinkName"></p>
+            <p class="subtitle is-4" id="drinkCategory"></p>
+            <p class="subtitle is-6" id="drinkAlcoholic"></p>
+            <p class="subtitle is-6" id="drinkGlass"></p>
+          </div>
+          <table id="drinkIngredient" class="table is-striped">
+            <tr>
+              <th>Ingredients</th>
+              <th>Amount</th>
+            </tr>
+          </table>
+          <div class="content" id="drinkInstructions"></div>
+          <iframe width="420" height="315" id="foodVideo" src=""> </iframe>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- <footer class="footer">
       <div class="content has-text-centered">
         <p>Created by Doug Jim & Candice</p>
       </div>
     </footer> -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
