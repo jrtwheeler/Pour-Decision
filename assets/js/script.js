@@ -1,4 +1,5 @@
 //Hide food and drink divs
+// Just wondering, why are these set to variables?
 var food_div = $(".object-food").hide();
 var food_div = $(".object-drink").hide();
 
