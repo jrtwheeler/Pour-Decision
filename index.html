@@ -59,26 +59,6 @@
               Click here
             </button>
           </article>
-          <div class="column has-text-centered">
-            <div class="card is-size-5 object-food">
-              <div class="card-image">
-                <img id="foodImage" src="" alt="Delicious Food" />
-              </div>
-              <div class="media-content">
-                <p class="title is-3" id="foodMeal"></p>
-                <p class="subtitle is-4" id="foodCategory"></p>
-                <p class="subtitle is-6" id="foodOrigin"></p>
-              </div>
-              <table id="foodIngredient" class="table is-striped">
-                <tr>
-                  <th>Ingredients</th>
-                  <th>Amount</th>
-                </tr>
-              </table>
-              <div class="content" id="foodInstructions"></div>
-              <iframe width="420" height="315" id="foodVideo" src=""> </iframe>
-            </div>
-          </div>
         </div>
         <div class="column has-text-centered">
           <article class="dropdown-beverage">
@@ -101,24 +81,53 @@
               </select>
             </div>
           </article>
-          <div class="card is-size-5 object-drink is-size-5">
+        </div>
+      </div>
+    </section>
+
+    <section class="content mt-4">
+      <div class="columns">
+        <div class="column">
+          <div class="card is-size-5 object-food">
             <div class="card-image">
-              <img id="drinkImage" src="" alt="Delicious Drink" />
+              <img id="foodImage" src="" alt="Delicious Food" />
             </div>
             <div class="media-content">
-              <p class="title is-3" id="drinkName"></p>
-              <p class="subtitle is-4" id="drinkCategory"></p>
-              <p class="subtitle is-6" id="drinkAlcoholic"></p>
-              <p class="subtitle is-6" id="drinkGlass"></p>
+              <p class="title is-3" id="foodMeal"></p>
+              <p class="subtitle is-4" id="foodCategory"></p>
+              <p class="subtitle is-6" id="foodOrigin"></p>
             </div>
-            <table id="drinkIngredient" class="table is-striped">
+            <table id="foodIngredient" class="table is-striped">
               <tr>
                 <th>Ingredients</th>
                 <th>Amount</th>
               </tr>
             </table>
-            <div class="content" id="drinkInstructions"></div>
+            <div class="content" id="foodInstructions"></div>
             <iframe width="420" height="315" id="foodVideo" src=""> </iframe>
+          </div>
+        </div>
+
+          <div class="column">
+            <div class="card is-size-5 object-drink">
+              <div class="card-image">
+                <img id="drinkImage" src="" alt="Delicious Drink" />
+              </div>
+              <div class="media-content">
+                <p class="title is-3" id="drinkName"></p>
+                <p class="subtitle is-4" id="drinkCategory"></p>
+                <p class="subtitle is-6" id="drinkAlcoholic"></p>
+                <p class="subtitle is-6" id="drinkGlass"></p>
+              </div>
+              <table id="drinkIngredient" class="table is-striped">
+                <tr>
+                  <th>Ingredients</th>
+                  <th>Amount</th>
+                </tr>
+              </table>
+              <div class="content" id="drinkInstructions"></div>
+              <iframe width="420" height="315" id="foodVideo" src=""> </iframe>
+            </div>
           </div>
         </div>
       </div>
