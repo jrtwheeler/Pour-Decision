@@ -4,8 +4,8 @@ var food_div = $(".object-drink").hide();
 
 $("#getRecipes").on("click", function () {
   //Show food and drink div
-  var food_div = $(".object-food").show();
-  var food_div = $(".object-drink").show();
+  food_div = $(".object-food").show();
+  food_div = $(".object-drink").show();
   var foodChoice = $("#foodChoice").val();
   var drinkChoice = $("#drinkChoice").val();
 
