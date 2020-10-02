@@ -1,3 +1,6 @@
+var food_div = $(".object-food").hide();
+var food_div = $(".object-drink").hide();
+
 $("#getRecipes").on("click", function () {
     var foodChoice = $("#foodChoice").val();
     var drinkChoice = $("#drinkChoice").val();
