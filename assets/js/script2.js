@@ -1,10 +1,16 @@
 //Hide section div
 var section_div = $(".section");
+var moreDrinkBtn = $("#moreDrink");
+var moreFoodBtn = $("#moreFood");
+var foodIngredInstr = $(".food-ingred-instr");
+var drinkIngredInstr = $(".drink-ingred-instr");
 section_div.hide();
 
 $("#getRecipes").on("click", function () {
     //Show food and drink div
     section_div.show();
+    drinkIngredInstr.hide();
+    foodIngredInstr.hide();
     var foodChoice = $("#foodChoice").val();
     var drinkChoice = $("#drinkChoice").val();
 
@@ -20,6 +26,14 @@ $("#getRecipes").on("click", function () {
         processCategoryDrink(drinkChoice);
     };
 });
+
+moreFoodBtn.on("click", function(){
+    foodIngredInstr.show();
+})
+
+moreDrinkBtn.on("click", function(){
+    drinkIngredInstr.show();
+})
 
 function dispFood(res) {
     var meal = res.meals[0];
