@@ -61,8 +61,8 @@ function dispFood(res) {
   var stop = false;
   console.log(meal.strMeal);
   $("#foodMeal").text(meal.strMeal);
-  $("#foodCategory").text(meal.strCategory);
-  $("#foodOrigin").text(meal.strArea);
+  $("#foodCategory").text("Category: " + meal.strCategory);
+  $("#foodOrigin").text("Origin: " + meal.strArea);
   $("#foodInstructions").text(meal.strInstructions);
   $("#foodImage").attr("src", meal.strMealThumb);
   $("#foodVideo").attr("src", meal.strYoutube);
@@ -88,9 +88,9 @@ function dispDrink(res) {
   var i = 1;
   var stop = false;
   $("#drinkName").text(drink.strDrink);
-  $("#drinkCategory").text(drink.strCategory);
-  $("#drinkAlcoholic").text(drink.strAlcoholic);
-  $("#drinkGlass").text(drink.strGlass);
+  $("#drinkCategory").text("Category: " + drink.strCategory);
+  $("#drinkAlcoholic").text("Origin: " + drink.strAlcoholic);
+  $("#drinkGlass").text("Recommmended Glass: " + drink.strGlass);
   $("#drinkInstructions").text(drink.strInstructions);
   $("#drinkImage").attr("src", drink.strDrinkThumb);
   while (!stop) {
