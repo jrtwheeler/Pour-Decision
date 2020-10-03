@@ -22,6 +22,7 @@
 .section {
     background-color: dimgray;
 }
+
 .title-content {
     padding: 30px;
     display: flex;
@@ -29,4 +30,17 @@
     align-content: center;
     flex-direction: column;
     /* Column | row */
-  }
+}
+/* .hero-body {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-food, .dropdown-beverage {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    /* Column | row */
+} */
