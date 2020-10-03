@@ -86,6 +86,7 @@
       <div class="column">
         <!-- This is the food card -->
         <div class="card">
+          <!-- This is the image and title section -->
           <div class="columns">
             <!-- This is where the image goes -->
             <div class="column">
@@ -93,11 +94,25 @@
             </div>
             <!-- This is where the Recipe info goes -->
             <div class="column">
-              <div>
-                <p class="title is-3 mx-2 is-vcentered" id="foodMeal"></p>
-                <p class="subtitle is-4 mx-2" id="foodCategory"></p>
-                <p class="subtitle is-6 mx-2" id="foodOrigin"></p>
+              <div class="title-content">
+                <p class="title is-3" id="foodMeal"></p>
+                <p class="subtitle is-5" id="foodCategory"></p>
+                <p class="subtitle is-5" id="foodOrigin"></p>
               </div>
+            </div>
+          </div>
+          <!-- This is the ingredient section -->
+          <div class="columns">
+            <div class="column">
+              <table id="foodIngredient" class="table is-striped">
+                <tr>
+                  <th>Ingredients</th>
+                  <th>Amount</th>
+                </tr>
+              </table>
+            </div>
+            <div class="column">
+              <p class="content mx-2" id="foodInstructions"></p>
             </div>
           </div>
         </div>
@@ -112,12 +127,25 @@
             </div>
             <!-- This is where the Recipe info goes -->
             <div class="column">
-              <div class="is-vcentered">
-                <p class="title is-3 mx-2" id="drinkName"></p>
-                <p class="subtitle is-4 mx-2" id="drinkCategory"></p>
-                <p class="subtitle is-6 mx-2" id="drinkAlcoholic"></p>
-                <p class="subtitle is-6 mx-2" id="drinkGlass"></p>
+              <div class="title-content">
+                <p class="title is-3" id="drinkName"></p>
+                <p class="subtitle is-5" id="drinkCategory"></p>
+                <p class="subtitle is-5" id="drinkAlcoholic"></p>
+                <p class="subtitle is-5" id="drinkGlass"></p>
               </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <table id="drinkIngredient" class="table is-striped">
+                <tr>
+                  <th>Ingredients</th>
+                  <th>Amount</th>
+                </tr>
+              </table>
+            </div>
+            <div class="column">
+              <p class="content mx-2" id="drinkInstructions"></p>
             </div>
           </div>
         </div>

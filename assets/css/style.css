@@ -1,4 +1,4 @@
-.hero-header-subtitle {
+/* .hero-header-subtitle {
     font-style: italic;
 }
 
@@ -17,8 +17,16 @@
 #drinkGlass
 #foodChoice {
     font-family: 'Abril Fatface', cursive;
-}
+} */
 
 .section {
     background-color: dimgray;
 }
+.title-content {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    /* Column | row */
+  }
