@@ -1,12 +1,10 @@
-//Hide food and drink divs
-//Why are these set to variables?
-var food_div = $(".object-food").hide();
-var food_div = $(".object-drink").hide();
+//Hide section div
+var section_div = $(".section");
+section_div.hide();
 
 $("#getRecipes").on("click", function () {
     //Show food and drink div
-    food_div = $(".object-food").show();
-    food_div = $(".object-drink").show();
+    section_div.show();
     var foodChoice = $("#foodChoice").val();
     var drinkChoice = $("#drinkChoice").val();
 
