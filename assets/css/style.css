@@ -1,23 +1,12 @@
-/* .hero-header-subtitle {
-    font-style: italic;
+.drinkIcon,
+.foodIcon {
+    width: 100px;
 }
 
-.hero,
-.button
- {
-    font-family: 'Abril Fatface', cursive;
-}
+#infoSubtitle {
+    color: black;
 
-#foodMeal,
-#foodCategory,
-#foodOrigin
-#drinkName
-#drinkCategory
-#drinkAlcoholic
-#drinkGlass
-#foodChoice {
-    font-family: 'Abril Fatface', cursive;
-} */
+}
 
 .section {
     background-color: dimgray;
@@ -31,16 +20,3 @@
     flex-direction: column;
     /* Column | row */
 }
-/* .hero-body {
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-food, .dropdown-beverage {
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    /* Column | row */
-} */

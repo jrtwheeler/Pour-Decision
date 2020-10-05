@@ -1,60 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Pour Decisions</title>
-  </head>
 
-  <body>
-    <header class="header hero is-primary">
-    <nav class="level">
-      <p class="level-item has-text-centered">
-        <img src="assets/images/PourDecisions-logo-single-line.png" />
-        <h2 class="subtitle hero-header-subtitle">
-          Pair a meal with a drink. Select categories below to get started.
-        </h2>
-      </p>
-      <p class="level-item has-text-centered">
-        <article class="dropdown-beverage">
-          <label class="is-size-5" for="drinks">Drink:</label>
-          <div class="select is-primary has-text-centered">
-            <select name="drink" id="drinkChoice">
-              <option value="Ordinary Drink">Ordinary Drink</option>
-              <option value="Cocktail">Cocktail</option>
-              <option value="Milk / Float / Shake">
-                Milk / Float / Shake
-              </option>
-              <option value="Other/Unknown">Other/Unknown</option>
-              <option value="Cocoa">Cocoa</option>
-              <option value="Shot">Shot</option>
-              <option value="Coffee / Tea">Coffee / Tea</option>
-              <option value="Homemade Liquor">Homemade Liquor</option>
-              <option value="Punch / Party Drink">Punch / Party Drink</option>
-              <option value="Beer">Beer</option>
-              <option value="Soft Drink / Soda">Soft Drink / Soda</option>
-              <option value="Random">Surprise Me</option>
-            </select>
-          </div>
-        </article>
-        <br></br>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Pour Decisions</title>
+</head>
+
+<body>
+  <header class="header hero is-primary">
+    <div class="container has-text-centered">
+      <img src="assets/images/PourDecisions-logo-single-line.png" />
+    </div>
+    <p>
+    <h2 id="infoSubtitle" class="subtitle hero-header-subtitle has-text-centered">
+      Pair a meal with a drink. Select from the categories to get started.
+    </h2>
+    </p>
+  </header>
+  <!-- The card for the dropdowns -->
+  <div class="card pb-2 has-text-centered">
+    <div class="columns">
+      <!-- This is the food choice column -->
+      <div class="column">
+        <div class="has-text-centered">
+          <img class="foodIcon" src="assets/images/food-text.png" />
+        </div>
         <article class="dropdown-food">
-          <label class="is-size-5 has-text-centered" for="food">Food:</label>
           <div class="select is-primary has-text-centered">
             <select name="food has-text-centered" id="foodChoice">
               <option value="Beef">Beef</option>
@@ -74,128 +51,147 @@
             </select>
           </div>
         </article>
-      </p>
-      <p class="level-item has-text-centered">
-        <button id="getRecipes" class="button">Search</button>
-      </p>
-    </nav>
-  </header>
-
-      <!-- <div>Pour Decsions</div> -->
-    </header>
-
-    <!-- Main Content -->
-    <section class="section">
-      <!-- This is food card column -->
-      <div class="columns">
-        <div class="column">
-          <!-- This is the food card -->
-          <div class="card">
-            <!-- This is the image and title section -->
-            <div class="columns">
-              <!-- This is where the image goes -->
-              <div class="column">
-                <img id="foodImage" src="" alt="Delicious Food" />
-              </div>
-              <!-- This is where the Recipe info goes -->
-              <div class="column">
-                <div class="title-content">
-                  <p class="title is-3" id="foodMeal"></p>
-                  <p class="subtitle is-5" id="foodCategory"></p>
-                  <p class="subtitle is-5" id="foodOrigin"></p>
-                  <button id="moreFood" class="button is-primary">
-                    Show more
-                  </button>
-                </div>
-              </div>
+      </div>
+      <!-- This is the drink choice column -->
+      <div class="column">
+        <div class="has-text-centered">
+          <img class="drinkIcon" src="assets/images/drink-text.png" />
+        </div>
+        <article class="dropdown-beverage">
+          <div class="select is-primary has-text-centered">
+            <select name="drink" id="drinkChoice">
+              <option value="Ordinary Drink">Ordinary Drink</option>
+              <option value="Cocktail">Cocktail</option>
+              <option value="Milk / Float / Shake">
+                Milk / Float / Shake
+              </option>
+              <option value="Other/Unknown">Other/Unknown</option>
+              <option value="Cocoa">Cocoa</option>
+              <option value="Shot">Shot</option>
+              <option value="Coffee / Tea">Coffee / Tea</option>
+              <option value="Homemade Liquor">Homemade Liquor</option>
+              <option value="Punch / Party Drink">Punch / Party Drink</option>
+              <option value="Beer">Beer</option>
+              <option value="Soft Drink / Soda">Soft Drink / Soda</option>
+              <option value="Random">Surprise Me</option>
+            </select>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!-- The search button div -->
+  <div class="column">
+    <p class="has-text-centered">
+      <button id="getRecipes" class="button is-primary is-large">Search</button>
+    </p>
+  </div>
+  
+  <!-- Main Content -->
+  <section class="section">
+    <!-- This is food card column -->
+    <div class="columns">
+      <div class="column">
+        <!-- This is the food card -->
+        <div class="card">
+          <!-- This is the image and title section -->
+          <div class="columns">
+            <!-- This is where the image goes -->
+            <div class="column">
+              <img id="foodImage" src="" alt="Delicious Food" />
             </div>
-            <!-- This is the ingredient section -->
-            <div class="columns food-ingred-instr">
-              <div class="column">
-                <table id="foodIngredient" class="table is-striped">
-                  <tr>
-                    <th>Ingredients</th>
-                    <th>Amount</th>
-                  </tr>
-                </table>
-              </div>
-              <div class="column">
-                <p class="content mx-2" id="foodInstructions"></p>
+            <!-- This is where the Recipe info goes -->
+            <div class="column">
+              <div class="title-content">
+                <p class="title is-3" id="foodMeal"></p>
+                <p class="subtitle is-5" id="foodCategory"></p>
+                <p class="subtitle is-5" id="foodOrigin"></p>
+                <button id="moreFood" class="button is-primary">
+                  Show more
+                </button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="column">
-          <!-- This is the drink card -->
-          <div class="card">
-            <div class="columns">
-              <!-- This is where the image goes -->
-              <div class="column">
-                <img id="drinkImage" src="" alt="Delicious Drink" />
-              </div>
-              <!-- This is where the Recipe info goes -->
-              <div class="column">
-                <div class="title-content">
-                  <p class="title is-3" id="drinkName"></p>
-                  <p class="subtitle is-5" id="drinkCategory"></p>
-                  <p class="subtitle is-5" id="drinkAlcoholic"></p>
-                  <p class="subtitle is-5" id="drinkGlass"></p>
-                  <button id="moreDrink" class="button is-primary">
-                    Show more
-                  </button>
-                </div>
-              </div>
+          <!-- This is the ingredient section -->
+          <div class="columns food-ingred-instr">
+            <div class="column">
+              <table id="foodIngredient" class="table is-striped">
+                <tr>
+                  <th>Ingredients</th>
+                  <th>Amount</th>
+                </tr>
+              </table>
             </div>
-            <div class="columns drink-ingred-instr">
-              <div class="column">
-                <table id="drinkIngredient" class="table is-striped">
-                  <tr>
-                    <th>Ingredients</th>
-                    <th>Amount</th>
-                  </tr>
-                </table>
-              </div>
-              <div class="column">
-                <p class="content mx-2" id="drinkInstructions"></p>
-              </div>
+            <div class="column">
+              <p class="content mx-2" id="foodInstructions"></p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Bulma</strong> by
-          <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
-          licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
-          website content is licensed
-          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-            >CC BY NC SA 4.0</a
-          >.
-        </p>
+      <div class="column">
+        <!-- This is the drink card -->
+        <div class="card">
+          <div class="columns">
+            <!-- This is where the image goes -->
+            <div class="column">
+              <img id="drinkImage" src="" alt="Delicious Drink" />
+            </div>
+            <!-- This is where the Recipe info goes -->
+            <div class="column">
+              <div class="title-content">
+                <p class="title is-3" id="drinkName"></p>
+                <p class="subtitle is-5" id="drinkCategory"></p>
+                <p class="subtitle is-5" id="drinkAlcoholic"></p>
+                <p class="subtitle is-5" id="drinkGlass"></p>
+                <button id="moreDrink" class="button is-primary">
+                  Show more
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="columns drink-ingred-instr">
+            <div class="column">
+              <table id="drinkIngredient" class="table is-striped">
+                <tr>
+                  <th>Ingredients</th>
+                  <th>Amount</th>
+                </tr>
+              </table>
+            </div>
+            <div class="column">
+              <p class="content mx-2" id="drinkInstructions"></p>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by
+        <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
+        licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+        website content is licensed
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <!-- <script src="assets/js/script.js"></script> -->
-    <script src="assets/js/script2.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <!-- <script src="assets/js/script.js"></script> -->
+  <script src="assets/js/script2.js"></script>
+</body>
+
 </html>
