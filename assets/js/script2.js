@@ -14,13 +14,15 @@ $("#getRecipes").on("click", function () {
     var foodChoice = $("#foodChoice").val();
     var drinkChoice = $("#drinkChoice").val();
 
-    if (foodChoice === "Random") {
+    if (foodChoice === "") {
+    } else if (foodChoice === "Random") {
         processRandFood()
     } else {
         processCategoryFood(foodChoice);
     };
 
-    if (drinkChoice === "Random") {    
+    if (drinkChoice === "") {
+    } else if (drinkChoice === "Random") {    
         processRandDrink()
     } else {
         processCategoryDrink(drinkChoice);
