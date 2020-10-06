@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" src="assets/images/favicon.ico">
   <title>Pour Decisions</title>
 </head>
 
 <body>
   <header class="header hero is-primary">
     <div class="container has-text-centered">
-      <img src="assets/images/PourDecisions-logo-single-line.png" />
+      <img src="assets/images/pour-logo.png" />
     </div>
     <p>
     <h2 id="infoSubtitle" class="subtitle hero-header-subtitle has-text-centered">
@@ -52,7 +53,7 @@
             </select>
           </div>
         </article>
-        <label class="checkbox">
+        <label class="checkbox mt-3 mb-3">
           <input type="checkbox" id="meal-checkbox">
           Remember me
         </label>
@@ -83,7 +84,7 @@
             </select>
           </div>
         </article>
-        <label class="checkbox">
+        <label class="checkbox mt-3 mb-3">
           <input type="checkbox" id="drink-checkbox">
           Remember me
         </label>
@@ -96,7 +97,7 @@
       <button id="getRecipes" class="button is-primary is-large">Search</button>
     </p>
   </div>
-  
+
   <!-- Main Content -->
   <section class="section">
     <!-- This is food card column -->
@@ -115,10 +116,12 @@
               <div class="title-content">
                 <p class="title is-3" id="foodMeal"></p>
                 <p class="subtitle is-5" id="foodCategory"></p>
-                <p class="subtitle is-5" id="foodOrigin"></p>
+                <!-- <p class="subtitle is-5" id="foodOrigin"></p> -->
+                <div>
                 <button id="moreFood" class="button is-primary">
                   Show more
                 </button>
+              </div>
               </div>
             </div>
           </div>
@@ -151,11 +154,13 @@
               <div class="title-content">
                 <p class="title is-3" id="drinkName"></p>
                 <p class="subtitle is-5" id="drinkCategory"></p>
-                <p class="subtitle is-5" id="drinkAlcoholic"></p>
-                <p class="subtitle is-5" id="drinkGlass"></p>
-                <button id="moreDrink" class="button is-primary">
-                  Show more
-                </button>
+                <!-- <p class="subtitle is-5" id="drinkAlcoholic"></p> -->
+                <!-- <p class="subtitle is-5" id="drinkGlass"></p> -->
+                <div>
+                  <button id="moreDrink" class="button is-primary">
+                    Show more
+                  </button>
+                </div>
               </div>
             </div>
           </div>
