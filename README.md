@@ -7,7 +7,8 @@ To use the app, follow the deployed link, or [click here](https://jrtwheeler.git
 ![Web page](assets/images/website_2.png)
 ![Web page](assets/images/website_3.png)
 ## Authors
-This page was developed with equal contributions from [ddunkle](https://github.com/ddunkle) and [SeeMoreGold](https://github.com/SeeMoreGold). To write the project, we used the following:
+This page was developed with equal contributions from [ddunkle](https://github.com/ddunkle) and [SeeMoreGold](https://github.com/SeeMoreGold). 
+## Technologies
 * Javascript
 * JQUERY
 * CSS
