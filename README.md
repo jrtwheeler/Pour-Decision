@@ -9,7 +9,7 @@ To use the app, follow the deployed link, or [click here](https://jrtwheeler.git
 ## Authors
 This page was developed with equal contributions from [ddunkle](https://github.com/ddunkle) and [SeeMoreGold](https://github.com/SeeMoreGold). 
 ## Technologies
-* Javascript
+* JavaScript
 * JQUERY
 * CSS
 * HTML
